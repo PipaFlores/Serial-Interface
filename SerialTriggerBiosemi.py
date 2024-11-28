@@ -19,9 +19,9 @@ class BiosemiTrigger(serial.Serial):
     """
     def __init__(self, Serial_Port, initial_delay = 3):
         """
-        Initialize the serial port. Set ups a delay of 3 seconds to allow the device to boot.
-        If no signals are sent shortly after initialization (e.g. within 3 seconds), then it can be
-        set to 0. Otherwise, the signal will not be sent.
+        Initialize the serial port. If an initial delay is needed, add it here. In some
+        cases, the device needs time to initialize the serial connection. We advice to test it
+        empirically (e.g., with an oscilloscope) if needed.
 
         Args:
             Serial_Port (string) - the port to initialize the serial port on.

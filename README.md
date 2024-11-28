@@ -1,6 +1,8 @@
 # Serial Trigger Interface
 
-This repository contains Python classes and examples for sending trigger signals via serial communication to [Biosemi trigger interface](https://www.biosemi.com/faq/USB%20Trigger%20interface%20cable.htm) and [Arduino](https://www.arduino.cc/) devices. It's particularly useful for experimental setups requiring precise timing and trigger signals. Some examples on how to send bytes to the interfaces are provided in the `how_to_byte_python.ipynb` notebook.
+This repository contains guiding examples for sending trigger signals via serial communication to [Biosemi trigger interface](https://www.biosemi.com/faq/USB%20Trigger%20interface%20cable.htm) and [Arduino](https://www.arduino.cc/) devices. While an utility class is provided for each device, it's also possible to achieve the same functionality using the serial.Serial object directly, in a simpler way. (See last example in `SerialTriggerBiosemi_example.py`)
+
+It's particularly useful for experimental setups requiring precise timing and trigger signals. Some examples on how to send bytes to the interfaces are provided in the `how_to_byte_python.ipynb` notebook.
 
 The setup and scripts were tested with an oscilloscope. Biosemi trigger interface results in a 3.3V pulse of 8ms duration, and the Arduino trigger interface can be modified as desired (see `trigger_pulse_5ms_arduino/` for example code).
 
