@@ -50,9 +50,11 @@ class ArduinoTrigger(serial.Serial):
         """
         if isinstance(signal, bool):
             if signal == True:
-                signal = bytes([1])
+                # signal = bytes([1])
+                signal = b"1" 
+                print(signal)
             else:
-                signal = bytes([0])
+                signal = b"\n"
         else:
             raise ValueError("Signal must be a boolean")
         self.write(signal)

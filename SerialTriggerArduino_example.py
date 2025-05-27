@@ -2,17 +2,19 @@ import time
 from SerialTriggerArduino import ArduinoTrigger
 
 # Initialize the serial port
-serialport = ArduinoTrigger("COM8")
+serialport = ArduinoTrigger("COM8", initial_delay=3)
 
 
 # Use the send_signal method to send a signal to the Arduino
 # Send 1, then 0, then 1, then 0
-serialport.send_signal(True)
+print("sent")
+serialport.send_signal(True,sleep=1)
 time.sleep(1)
 serialport.send_signal(False)
 time.sleep(1)
 
-serialport.send_signal(True)
+print("sent")
+serialport.send_signal(True,sleep=1)
 time.sleep(1)
 serialport.send_signal(False)
 
